@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/CDelgrange/back-end-course#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",

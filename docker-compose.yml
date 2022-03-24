@@ -1,21 +1,12 @@
 version: "3.7"
 
 services:
-  bec-svc:
-    image: bec-image
-    ports:
-      - 3000:3000
-    environment:
-      DB_URL: postgres://charlely:password@postgres-svc:5432/bec_db
-
   postgres-svc:
     image: postgres
+    ports:
+      - 5432:5432
     volumes:
       - bec-data:/var/lib/postgresql/data
-    environment:
-      POSTGRES_PASSWORD: password
-      POSTGRES_USER: charlely
-      POSTGRES_DB: bec_db
 
   adminer-svc:
     image: adminer
